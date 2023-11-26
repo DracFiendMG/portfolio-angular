@@ -16,4 +16,9 @@ import { ProjectsComponent } from "./projects/projects.component";
 })
 export class AppComponent {
   title = 'portfolio-angular';
+  loadedTab = 'home'
+
+  onNavigate(tab: string) {
+    this.loadedTab = tab
+  }
 }
