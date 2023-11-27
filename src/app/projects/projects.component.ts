@@ -9,8 +9,7 @@ import { ProjectDetailsComponent } from "./project-details/project-details.compo
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.css',
     imports: [CommonModule, 
-              ProjectListComponent, 
-              ProjectDetailsComponent]
+              ProjectListComponent]
 })
 export class ProjectsComponent {
   
