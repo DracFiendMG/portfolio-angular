@@ -1,0 +1,26 @@
+[
+    {
+        "name": "portfolio-angular",
+        "description": "",
+        "imagePath": "",
+        "projectLink": "https://github.com/DracFiendMG/portfolio-angular"
+    },
+    {
+        "name": "airbnb-demo",
+        "description": "",
+        "imagePath": "",
+        "projectLink": "https://github.com/DracFiendMG/airbnb-demo"
+    },
+    {
+        "name": "EDPlayer",
+        "description": "",
+        "imagePath": "",
+        "projectLink": "https://github.com/DracFiendMG/EDPlayer"
+    },
+    {
+        "name": "Online_VCDS",
+        "description": "",
+        "imagePath": "",
+        "projectLink": "https://github.com/DracFiendMG/Online_VCDS"
+    }
+]
