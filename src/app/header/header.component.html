@@ -1,30 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bolder" href="#"><h1>S</h1></a>
+      
+      <a class="navbar-brand fw-bolder" href="#"><h1>$</h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 my-lg-0 fs-5">
           <li class="nav-item mx-5">
-            <a href="" class="nav-link" (click)="onSelect('home')">
+            <a href="#" class="nav-link" [ngClass]="{ 'active': activeTab === 'home' }" (click)="onSelect('home')">
               Home
             </a>
           </li>
           <li class="nav-item mx-5">
-            <a href="#" class="nav-link" (click)="onSelect('pages')">
+            <a href="#" class="nav-link" [ngClass]="{ 'active': activeTab === 'pages' }" (click)="onSelect('pages')">
               Pages
             </a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#" (click)="onSelect('projects')" >Projects</a>
+            <a class="nav-link" href="#" [ngClass]="{ 'active': activeTab === 'projects' }" (click)="onSelect('projects')" >
+              Projects
+            </a>
           </li>
           <li class="nav-item mx-5">
-            <a href="#" class="nav-link" (click)="onSelect('experience')">
+            <a href="#" class="nav-link" [ngClass]="{ 'active': activeTab === 'experience' }" (click)="onSelect('experience')">
               Experience
             </a>
           </li>
-          <li class="nav-item dropdown mx-5">
+          <li class="nav-item dropdown ms-5">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
