@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { TimelineComponent } from "./timeline/timeline.component";
+import { PagesComponent } from "./pages/pages.component";
 
 @Component({
     selector: 'app-root',
@@ -13,7 +14,7 @@ import { TimelineComponent } from "./timeline/timeline.component";
     imports: [CommonModule,
         RouterOutlet,
         HeaderComponent,
-        ProjectsComponent, TimelineComponent]
+        ProjectsComponent, TimelineComponent, PagesComponent]
 })
 export class AppComponent {
   title = 'portfolio-angular';
