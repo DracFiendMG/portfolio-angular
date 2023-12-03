@@ -8,23 +8,27 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 my-lg-0 fs-5">
           <li class="nav-item mx-5">
-            <a href="#" class="nav-link" [ngClass]="{ 'active': activeTab === 'home' }" (click)="onSelect('home')">
-              Home
+            <a href="#" class="nav-link" (click)="onSelect('home')">
+              <span [ngClass]="{ 'active': activeTab === 'home',
+                                  'link': activeTab !== 'home' }"> Home </span>
             </a>
           </li>
           <li class="nav-item mx-5">
-            <a href="#" class="nav-link" [ngClass]="{ 'active': activeTab === 'pages' }" (click)="onSelect('pages')">
-              Pages
+            <a href="#" class="nav-link" (click)="onSelect('pages')">
+              <span [ngClass]="{ 'active': activeTab === 'pages',
+                                  'link': activeTab !== 'pages' }"> Pages </span>
             </a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#" [ngClass]="{ 'active': activeTab === 'projects' }" (click)="onSelect('projects')" >
-              Projects
+            <a class="nav-link" href="#" (click)="onSelect('projects')" >
+              <span [ngClass]="{ 'active': activeTab === 'projects',
+                                  'link': activeTab !== 'projects' }"> Projects </span>
             </a>
           </li>
           <li class="nav-item mx-5">
-            <a href="#" class="nav-link" [ngClass]="{ 'active': activeTab === 'experience' }" (click)="onSelect('experience')">
-              Experience
+            <a href="#" class="nav-link" (click)="onSelect('experience')">
+              <span [ngClass]="{ 'active': activeTab === 'experience',
+                                  'link': activeTab !== 'experience' }"> Experience </span>
             </a>
           </li>
           <li class="nav-item dropdown ms-5">
