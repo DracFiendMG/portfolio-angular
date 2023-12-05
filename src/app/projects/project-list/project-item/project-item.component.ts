@@ -11,4 +11,5 @@ import { Project } from '../../project.model';
 })
 export class ProjectItemComponent {
   @Input() project!: Project
+  activeProject: string = 'portfolio-angular'
 }

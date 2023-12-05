@@ -8,6 +8,15 @@
         <a [href]="project.projectLink" target="_blank" class="stretched-link"></a>
     </div>
 </div> -->
-<div>
-    <img src="http://m.gettywallpapers.com/wp-content/uploads/2021/05/4k-Wallpaper-Cool-scaled.jpg" width="100%" alt="">
+<!-- <div class="container-fluid" [style.background-image]="'url('+project.imagePath+')'">
+    
+</div> -->
+
+<div class="carousel-item" [ngClass]="{ 'active': activeProject === project.name }">
+    <img src="{{ project.imagePath }}" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>{{ project.name }}</h5>
+        <p>{{ project.description }}</p>
+    </div>
+    <a [href]="project.projectLink" target="_blank" class="stretched-link"></a>
 </div>
