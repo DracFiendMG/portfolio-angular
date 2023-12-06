@@ -1,0 +1,28 @@
+/* .carousel .carousel-indicators button {
+    width: 10px;
+   height: 10px;
+   border-radius: 100%;
+ } */
+
+/* .carousel-control-prev,
+.carousel-control-next{
+  padding: 45% 0 0 0
+} */
+
+/* .carousel-control-next {
+  padding: 45% 10% 0 0
+} */
+
+.carousel-control-next {
+  top: 85%;
+  right: 85%;
+  width: 5%;
+  height: 5%;
+}
+
+.carousel-control-prev {
+  top: 85%;
+  left: 5%;
+  width: 5%;
+  height: 5%;
+}
