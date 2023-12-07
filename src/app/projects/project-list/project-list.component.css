@@ -1,18 +1,3 @@
-/* .carousel .carousel-indicators button {
-    width: 10px;
-   height: 10px;
-   border-radius: 100%;
- } */
-
-/* .carousel-control-prev,
-.carousel-control-next{
-  padding: 45% 0 0 0
-} */
-
-/* .carousel-control-next {
-  padding: 45% 10% 0 0
-} */
-
 .carousel-control-next {
   top: 85%;
   right: 85%;
@@ -26,3 +11,20 @@
   width: 5%;
   height: 5%;
 }
+
+.carousel-indicators {
+  /* display: flex; */
+  flex-flow: column nowrap;
+  top: 40%;
+  left: 90%;
+  width: 5%;
+  height: 15%;
+  margin: 0;
+  align-items: center;
+  z-index: 1;
+}
+
+/* .carousel-indicators > button {
+  max-width: 30px;
+  min-height: 3px;
+} */
