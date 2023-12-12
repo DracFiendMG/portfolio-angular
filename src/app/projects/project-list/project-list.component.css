@@ -12,8 +12,7 @@
   height: 5%;
 }
 
-.carousel-indicators {
-  /* display: flex; */
+/* .carousel-indicators {
   flex-flow: column nowrap;
   top: 40%;
   left: 90%;
@@ -24,7 +23,9 @@
   z-index: 1;
 }
 
-/* .carousel-indicators > button {
-  max-width: 30px;
-  min-height: 3px;
+.carousel-indicators > button {
+  display: inline;
+  text-align: center;
+  color: white;
+  font-size: 50px;
 } */
