@@ -1,0 +1,13 @@
+.quote {
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: 600;
+    text-align: left;
+    color: #ffffff;
+    margin: 0 20% 0 0;
+}
+
+.row {
+    padding-top: 19.7% !important;
+    padding-bottom: 4% !important;
+}
