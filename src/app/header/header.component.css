@@ -25,3 +25,7 @@
 .link:hover::after {
     width: 100%;
 }
+
+.dark-header {
+    background-color: #000;
+}
