@@ -13,6 +13,12 @@
     /* text-decoration: underline; */
 }
 
+.active-dark {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+    /* text-decoration: underline; */
+}
+
 .link::after {
     content: '';
     display: block;
@@ -23,6 +29,23 @@
 }
 
 .link:hover::after {
+    width: 100%;
+}
+
+.link-dark {
+    color: #fff
+}
+
+.link-dark::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.link-dark:hover::after {
     width: 100%;
 }
 
