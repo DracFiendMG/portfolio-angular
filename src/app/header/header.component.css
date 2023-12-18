@@ -33,7 +33,7 @@
 }
 
 .link-dark {
-    color: #fff
+    color: #fff !important
 }
 
 .link-dark::after {
