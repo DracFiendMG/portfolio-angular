@@ -11,3 +11,23 @@
     padding-top: 19.7% !important;
     padding-bottom: 4% !important;
 }
+
+.input-bg {
+    background-color: #000;
+}
+
+::placeholder {
+    color: #838383;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input:focus, input.form-control:focus, textarea:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
