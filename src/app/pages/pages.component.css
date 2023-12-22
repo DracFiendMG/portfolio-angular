@@ -14,6 +14,8 @@
 
 .input-bg {
     background-color: #000;
+    border-radius: 0;
+    color: #fff;
 }
 
 ::placeholder {
@@ -30,4 +32,19 @@ input:focus, input.form-control:focus, textarea:focus {
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+.btn-props {
+    background-color: #000;
+    border-color: #fff;
+    border-radius: 0;
+    max-width: 200px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-props:hover, .btn-props:active {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
 }
