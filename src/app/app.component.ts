@@ -5,6 +5,7 @@ import { HeaderComponent } from "./header/header.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { TimelineComponent } from "./timeline/timeline.component";
 import { PagesComponent } from "./pages/pages.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
     selector: 'app-root',
@@ -14,7 +15,10 @@ import { PagesComponent } from "./pages/pages.component";
     imports: [CommonModule,
         RouterOutlet,
         HeaderComponent,
-        ProjectsComponent, TimelineComponent, PagesComponent]
+        ProjectsComponent, 
+        TimelineComponent, 
+        PagesComponent, 
+        FooterComponent]
 })
 export class AppComponent {
   title = 'portfolio-angular';

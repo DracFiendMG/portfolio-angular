@@ -1,3 +1,6 @@
 .body-con {
     max-width: 1700px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
