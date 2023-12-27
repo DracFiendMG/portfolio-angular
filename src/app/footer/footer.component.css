@@ -1,3 +1,8 @@
-.footer-bg {
-    background-color: #000;
+.footer-dark {
+    background-color: #000 !important;
+    color: #fff !important
+}
+
+.border-bottom {
+    border-color: #333 !important;
 }
