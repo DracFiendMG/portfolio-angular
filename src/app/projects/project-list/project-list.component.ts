@@ -4,6 +4,7 @@ import { ProjectItemComponent } from "./project-item/project-item.component";
 import { Project } from '../project.model';
 // import * as projectData from 'assets/projectData.json'
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { ProjectsService } from '../projects.service';
 
 @Component({
     selector: 'app-project-list',
@@ -16,21 +17,16 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 })
 export class ProjectListComponent {
   projects!: Project[];
+  // for getting data from json
   url: string = 'assets/projectData.json'
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private projectsService: ProjectsService) {}
 
   ngOnInit() {
-    this.http.get<Project[]>(this.url).subscribe(res => {
-      this.projects = res
-    })
+    // this.http.get<Project[]>(this.url).subscribe(res => {
+    //   this.projects = res
+    // })
+    this.projects = this.projectsService.projects
   }
-  // projects: Project[] = [
-  //   new Project('A Test Project','This is a simple test','https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/IchigoKurosakiBleach.jpg/220px-IchigoKurosakiBleach.jpg','https://github.com/DracFiendMG/meme-generator'),
-  //   new Project('A Test Project','This is a simple test','https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/IchigoKurosakiBleach.jpg/220px-IchigoKurosakiBleach.jpg','https://github.com/DracFiendMG/meme-generator'),
-  //   new Project('A Test Project','This is a simple test','https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/IchigoKurosakiBleach.jpg/220px-IchigoKurosakiBleach.jpg','https://github.com/DracFiendMG/meme-generator'),
-  //   new Project('A Test Project','This is a simple test','https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/IchigoKurosakiBleach.jpg/220px-IchigoKurosakiBleach.jpg','https://github.com/DracFiendMG/meme-generator'),
-  //   new Project('A Test Project','This is a simple test','https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/IchigoKurosakiBleach.jpg/220px-IchigoKurosakiBleach.jpg','https://github.com/DracFiendMG/meme-generator'),
-  //   new Project('A Test Project','This is a simple test','https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/IchigoKurosakiBleach.jpg/220px-IchigoKurosakiBleach.jpg','https://github.com/DracFiendMG/meme-generator')
-  // ]
 }
