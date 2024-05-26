@@ -18,7 +18,7 @@ import { ProjectsService } from '../projects.service';
 export class ProjectListComponent {
   projects!: Project[];
   // for getting data from json
-  url: string = 'assets/projectData.json'
+  // url: string = './assets/projectData.json'
 
   constructor(private http: HttpClient,
               private projectsService: ProjectsService) {}
