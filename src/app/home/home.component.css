@@ -1,4 +1,17 @@
-.mx-6 {
+.ml-6 {
     margin-left: 10% !important;
+}
+
+.mr-6 {
     margin-right: 10% !important;
+}
+
+/* .image-container {
+    
+} */
+
+.image-container img {
+    width: 125%;
+    border-radius: 50%;
+    clip-path: circle(33% at 50% 50%);
 }
