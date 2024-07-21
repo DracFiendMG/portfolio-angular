@@ -15,3 +15,71 @@
     border-radius: 50%;
     clip-path: circle(33% at 50% 50%);
 }
+
+.container {
+    position: relative;
+    width: 500px; /* Adjust based on your image size */
+    margin: auto;
+}
+
+.base-image {
+    width: 100%;
+    height: auto;
+}
+
+.icon {
+    position: absolute;
+    width: 50px; /* Adjust the size of the icons */
+    height: 50px;
+}
+
+.icon.springboot {
+    top: 10px;
+    left: 10px;
+}
+
+.icon.html {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.mulesoft {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.angular {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.typescript {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.css {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.oracle {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.sql {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.java {
+    top: 10px;
+    right: 10px;
+}
+
+.icon.figma {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
