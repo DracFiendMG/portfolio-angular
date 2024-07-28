@@ -10,47 +10,47 @@ export class HomeService {
         },
         {
             name: "figma-icon",
-            description: "my profile image",
+            description: "figma image",
             imagePath: "./assets/figma-icon.png"
         },
         {
             name: "angular-icon",
-            description: "my profile image",
+            description: "angular image",
             imagePath: "./assets/angular-icon.png"
         },
         {
             name: "java-icon",
-            description: "my profile image",
+            description: "java image",
             imagePath: "./assets/java-icon.png"
         },
         {
             name: "springboot-icon",
-            description: "my profile image",
+            description: "springboot image",
             imagePath: "./assets/springboot-icon.png"
         },
         {
             name: "typescript-icon",
-            description: "my profile image",
+            description: "typescript image",
             imagePath: "./assets/typescript-icon.png"
         },
         {
             name: "html-icon",
-            description: "my profile image",
+            description: "html image",
             imagePath: "./assets/html-icon.webp"
         },
         {
             name: "css-icon",
-            description: "my profile image",
+            description: "css image",
             imagePath: "./assets/css-icon.png"
         },
         {
             name: "mulesoft-icon",
-            description: "my profile image",
+            description: "mulesoft image",
             imagePath: "./assets/mulesoft-icon.webp"
         },
         {
             name: "sql-icon",
-            description: "my profile image",
+            description: "sql image",
             imagePath: "./assets/sql-icon.png"
         },
     ]
