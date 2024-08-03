@@ -17,7 +17,7 @@
 }
 
 .container {
-    position: relative;
+    /* position: relative; */
     width: 500px; /* Adjust based on your image size */
     margin: auto;
 }

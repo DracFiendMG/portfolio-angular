@@ -25,11 +25,17 @@ export class HomeComponent {
     this.displayImages = this.homeService.displayImages
     // const TagCloud = node.require('TagCloud')
     const container: string = '.cloud'
-    const image = '<img class="icon angular" src="./assets/angular-icon.png" alt="displayImages[2].description">'
-    const text = ['3D', 'TagCloud', 'JavaScript',
-    'CSS3', '<i>Animation</i>', image,
-    'Mouse', 'Rolling', 'Sphere',
-    '6KB', 'v2.x',]
+    let text = []
+    let image = '<img class="icon angular" src="./assets/angular-icon.png" alt="displayImages[2].description" width="15%">'
+    for (let i = 1; i < this.displayImages.length; i++) {
+      image = `<img class="icon angular" src=${this.displayImages[i].imagePath} alt=${this.displayImages[i].description} width="15%">`
+      text.push(image)
+    }
+    
+    // text = ['3D', 'TagCloud', 'JavaScript',
+    // 'CSS3', '<i>Animation</i>', image,
+    // 'Mouse', 'Rolling', 'Sphere',
+    // '6KB', 'v2.x',]
 
     TagCloud(container, text, {
       radius: 230,
