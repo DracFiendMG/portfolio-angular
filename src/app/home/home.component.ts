@@ -22,25 +22,35 @@ export class HomeComponent {
   }
   
   ngOnInit() {
+    // this.homeService.displayImages.subscribe({
+    //   next: (displayImages) => {
+    //     console.log(displayImages)
+    //     this.displayImages = displayImages
+    //   }
+    // })
+    
+    // this.homeService.getImages().subscribe({
+    //   next: (displayImages) => {
+    //     console.log(displayImages)
+    //     this.displayImages = displayImages
+    //   }
+    // })
+
     this.displayImages = this.homeService.displayImages
-    // const TagCloud = node.require('TagCloud')
+
     const container: string = '.cloud'
     let text = []
-    let image = '<img class="icon angular" src="./assets/angular-icon.png" alt="displayImages[2].description" width="15%">'
+    let image = ''
     for (let i = 1; i < this.displayImages.length; i++) {
       image = `<img class="icon angular" src=${this.displayImages[i].imagePath} alt=${this.displayImages[i].description} width="15%">`
+      // image = `<app-pages></app-pages>`
       text.push(image)
     }
-    
-    // text = ['3D', 'TagCloud', 'JavaScript',
-    // 'CSS3', '<i>Animation</i>', image,
-    // 'Mouse', 'Rolling', 'Sphere',
-    // '6KB', 'v2.x',]
 
     TagCloud(container, text, {
       radius: 230,
       maxSpeed: 'normal',
-      useHTML: true
+      useHTML: true,
     })
   }
 }
