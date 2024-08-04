@@ -22,35 +22,6 @@ export class HomeComponent {
   }
   
   ngOnInit() {
-    // this.homeService.displayImages.subscribe({
-    //   next: (displayImages) => {
-    //     console.log(displayImages)
-    //     this.displayImages = displayImages
-    //   }
-    // })
-    
-    // this.homeService.getImages().subscribe({
-    //   next: (displayImages) => {
-    //     console.log(displayImages)
-    //     this.displayImages = displayImages
-    //   }
-    // })
-
     this.displayImages = this.homeService.displayImages
-
-    const container: string = '.cloud'
-    let text = []
-    let image = ''
-    for (let i = 1; i < this.displayImages.length; i++) {
-      image = `<img class="icon angular" src=${this.displayImages[i].imagePath} alt=${this.displayImages[i].description} width="15%">`
-      // image = `<app-pages></app-pages>`
-      text.push(image)
-    }
-
-    TagCloud(container, text, {
-      radius: 230,
-      maxSpeed: 'normal',
-      useHTML: true,
-    })
   }
 }

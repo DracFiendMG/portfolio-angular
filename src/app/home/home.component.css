@@ -33,53 +33,14 @@
     height: 50px;
 }
 
-/* .icon.springboot {
-    top: 10px;
-    left: 10px;
+.bi {
+    font-size: 40px;
+    padding-right: 20px;
 }
 
-.icon.html {
-    top: 10px;
-    right: 10px;
+.line {
+    margin-top: 20px;
+    height: 1px;
+    background: rgb(75, 75, 75);
+    /* box-shadow: 0px 0px 10px 5px rgb(249, 255, 255); */
 }
-
-.icon.mulesoft {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.angular {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.typescript {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.css {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.oracle {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.sql {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.java {
-    top: 10px;
-    right: 10px;
-}
-
-.icon.figma {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-} */

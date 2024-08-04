@@ -9,6 +9,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { ProjectsService } from './projects/projects.service';
 import { HomeComponent } from "./home/home.component";
 import { HomeService } from './home/home.service';
+import { SkillsComponent } from "./skills/skills.component";
 
 @Component({
     selector: 'app-root',
@@ -17,12 +18,14 @@ import { HomeService } from './home/home.service';
     styleUrl: './app.component.css',
     providers: [ProjectsService, HomeService],
     imports: [CommonModule,
-        RouterOutlet,
-        HeaderComponent,
-        ProjectsComponent,
-        TimelineComponent,
-        PagesComponent,
-        FooterComponent, HomeComponent]
+    RouterOutlet,
+    HeaderComponent,
+    ProjectsComponent,
+    TimelineComponent,
+    PagesComponent,
+    FooterComponent, 
+    HomeComponent, 
+    SkillsComponent]
 })
 export class AppComponent {
   title = 'portfolio-angular';

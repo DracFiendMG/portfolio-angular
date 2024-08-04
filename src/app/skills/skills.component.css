@@ -1,0 +1,13 @@
+.ml-6 {
+    margin-left: 10% !important;
+}
+
+.mr-6 {
+    margin-right: 10% !important;
+}
+
+.container {
+    /* position: relative; */
+    width: 500px; /* Adjust based on your image size */
+    margin: auto;
+}
