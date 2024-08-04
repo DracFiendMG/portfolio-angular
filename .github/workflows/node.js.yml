@@ -28,6 +28,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm install -g @angular/cli
-    - run: ng build --output-path docs --base-href "https://github.com/DracFiendMG/portfolio-angular/"
+    # - run: npm install -g @angular/cli
+    # - run: ng build --output-path docs --base-href "https://github.com/DracFiendMG/portfolio-angular/"
     - run: npm run build
