@@ -14,6 +14,7 @@ import TagCloud from 'TagCloud';
 })
 export class HomeComponent {
   displayImages!: DisplayImage[]
+  summary: string = ""
 
   // declare function require(params:type);
 
@@ -23,5 +24,6 @@ export class HomeComponent {
   
   ngOnInit() {
     this.displayImages = this.homeService.displayImages
+    this.summary = this.homeService.summary
   }
 }
