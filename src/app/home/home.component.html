@@ -7,10 +7,10 @@
             <div class="line"></div>
             <div class="fs-5 text-break summary" [innerHTML]="summary"></div>
             <div class="line"></div>
-            <div class="mt-4">
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                <a href=""><i class="bi bi-github"></i></a>
-                <a href=""><i class="bi bi-whatsapp"></i></a>
+            <div class="mt-4 contact-links">
+                <a [href]="[links[0].link]" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a [href]="[links[1].link]" target="_blank"><i class="bi bi-github"></i></a>
+                <a [href]="[links[2].link]" target="_blank"><i class="bi bi-whatsapp"></i></a>
             </div>
         </div>
         <!-- <div class="image-container col-4 my-4 mr-6 text-center">

@@ -5,6 +5,20 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class HomeService {
+    links = [
+        {
+            name: "linkedIn",
+            link: "https://www.linkedin.com/in/sreeram-17ba861a4/"
+        }, 
+        {
+            name: "github",
+            link: "https://github.com/DracFiendMG"
+        },
+        {
+            name: "whatsapp",
+            link: "https://wa.me/+918140266972"
+        }
+    ]
     summary = `I’m a <b class="keywords">Full Stack Developer</b> with over 1.5 years of experience at Wipro, 
                 specializing in <b class="keywords">Java</b>, <b class="keywords">Spring Boot</b>, <b class="keywords">MuleSoft</b> and <b class="keywords">Angular</b>. 
                 I have a strong background in <b class="keywords">REST API development</b>, messaging with <b class="keywords">RabbitMQ</b>, 

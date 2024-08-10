@@ -4,6 +4,7 @@ import { DisplayImage } from './display-image.model';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeService } from './home.service';
 import TagCloud from 'TagCloud';
+import { Links } from './links.model';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import TagCloud from 'TagCloud';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  displayImages!: DisplayImage[]
+  links: Links[] = []
+  displayImages: DisplayImage[] = []
   summary: string = ""
 
   // declare function require(params:type);
@@ -23,6 +25,7 @@ export class HomeComponent {
   }
   
   ngOnInit() {
+    this.links = this.homeService.links
     this.displayImages = this.homeService.displayImages
     this.summary = this.homeService.summary
   }
