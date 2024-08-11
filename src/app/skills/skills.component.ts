@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DisplayImage } from '../home/display-image.model';
 import { HttpClient } from '@angular/common/http';
@@ -13,6 +13,7 @@ import TagCloud from 'TagCloud';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
+  radius = 200
   displayImages: DisplayImage[] = []
   
   constructor(private http: HttpClient, private homeService: HomeService) {}
@@ -24,15 +25,23 @@ export class SkillsComponent {
     let text = []
     let image = ''
     for (let i = 1; i < this.displayImages.length; i++) {
-      image = `<img class="icon angular" src=${this.displayImages[i].imagePath} alt=${this.displayImages[i].description} width="15%">`
+      image = `<img class="icon" src=${this.displayImages[i].imagePath} alt=${this.displayImages[i].description} width="15%">`
       // image = `<app-pages></app-pages>`
       text.push(image)
     }
 
     TagCloud(container, text, {
-      radius: 230,
+      radius: this.radius,
       maxSpeed: 'normal',
       useHTML: true,
     })
+  }
+
+  ngOnChanges() {
+    
+  }
+
+  @HostListener("window:resize", []) updateRadius () {
+    return window.innerWidth/40
   }
 }

@@ -17,6 +17,10 @@ export class HomeService {
         {
             name: "whatsapp",
             link: "https://wa.me/+918140266972"
+        },
+        {
+            name: "mail",
+            link: "mailto:sreeramrdy@gmail.com"
         }
     ]
     summary = `I’m a <b class="keywords">Full Stack Developer</b> with over 1.5 years of experience at Wipro, 
