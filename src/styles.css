@@ -1,4 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     background-color: #000;
+    overflow: hidden;
+}
+
+/* body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	cursor: none;
+}
+body h1 {
+	color: #fff;
+	font-family: "Protest Riot", sans-serif;
+	font-size: 60px;
+} */
+.cursor {
+	position: absolute;
+	width: 45%;
+	height: 90%;
+	border-radius: 50%;
+	background-color: rgb(212, 212, 212);
+	mix-blend-mode: difference;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: width 0.3s, height 0.3s, background-color 0.3s;
+	/* animation: glow 1s infinite alternate; */
+    opacity: 0.1;
+    background: radial-gradient(circle at center, rgb(255, 235, 235) 0, rgb(126, 126, 126), rgb(19, 19, 19) 50%);
+}
+@keyframes glow {
+	0% {
+		box-shadow: 0 0 10px 5px rgba(191, 239, 255, 0.5);
+	}
+	100% {
+		box-shadow: 0 0 20px 10px rgba(212, 244, 255, 0.9);
+	}
 }

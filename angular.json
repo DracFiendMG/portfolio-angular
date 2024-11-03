@@ -33,7 +33,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/TagCloud/dist/TagCloud.min.js"
+              "node_modules/TagCloud/dist/TagCloud.min.js",
+              "src/assets/js/mouse-glow.js"
             ]
           },
           "configurations": {

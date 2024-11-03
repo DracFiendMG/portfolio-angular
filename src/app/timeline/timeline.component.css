@@ -35,3 +35,51 @@ a {
   color: #14a2c5;
   font-weight: 500;
 }
+
+.experience-card {
+  background-color: #1a2a3a; /* Dark background color */
+  color: #d1e0f0; /* Light text color */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #8fa2b2;
+  margin: 5px 0;
+}
+
+.title {
+  font-size: 1.3em;
+  color: #63f5cc; /* Light teal color for the title */
+  margin: 5px 0;
+}
+
+.company {
+  color: #8fa2b2; /* Slightly muted color for company name */
+}
+
+.description {
+  font-size: 1em;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #d1e0f0;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.tech-tag {
+  background-color: #20384d;
+  color: #63f5cc;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.85em;
+}
