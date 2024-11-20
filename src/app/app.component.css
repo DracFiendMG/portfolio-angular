@@ -1,6 +1,25 @@
 .body-con {
-    max-width: 1700px;
+    /* max-width: 1700px; */
     min-height: 80vh;
     display: flex;
     flex-direction: column;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    /* padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5); */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content {
+    background-size: cover; 
+    background-position: center;
+    /* display: flex; */
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+    transition: background-image 1s ease-in-out;
+    /* opacity: 0.5; */
 }

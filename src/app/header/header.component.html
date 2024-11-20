@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg" [ngClass]="{'dark-header': activeTab === 'pages',
                                                   'navbar-dark': activeTab === 'pages',
                                                   'bg-light': activeTab !== 'pages',
-                                                  'navbar-light': activeTab !== 'pages'}">
+                                                  'navbar-light': activeTab !== 'pages',
+                                                  'navbar-transparent': activeTab === 'projects'}">
     <div class="container-fluid">
       
       <a class="navbar-brand fw-bolder" href="#"><h1>$</h1></a>
@@ -17,13 +18,13 @@
                                   'link-dark': activeTab === 'pages' }"> Home </span>
             </a>
           </li>
-          <li class="nav-item mx-5">
+          <!-- <li class="nav-item mx-5">
             <a href="#" class="nav-link" (click)="onSelect('skills')">
               <span [ngClass]="{ 'active': activeTab === 'skills',
                                   'link': activeTab !== 'skills',
                                   'link-dark': activeTab === 'pages' }"> Skills </span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item mx-5">
             <a href="#" class="nav-link" (click)="onSelect('pages')">
               <span [ngClass]="{ 'active-dark': activeTab === 'pages',

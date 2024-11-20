@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import TagCloud from 'TagCloud';
 import { DisplayImage } from '../home/display-image.model';
 import { HomeService } from '../home/home.service';
+import { Experience } from './experience/experience.interface';
+import { ExperienceService } from './experience/experience.service';
 
 @Component({
   selector: 'app-timeline',
@@ -16,19 +18,13 @@ export class TimelineComponent {
   radius = 200
   displayImages: DisplayImage[] = []
 
-  experience = {
-    startDate: '2024',
-    endDate: 'PRESENT',
-    title: 'Senior Frontend Engineer, Accessibility',
-    company: 'Klaviyo',
-    description: 'Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
-    techStack: ['JavaScript', 'TypeScript', 'React', 'Storybook']
-  };
+  experiences: Experience[] = [];
   
-  constructor(private http: HttpClient, private homeService: HomeService) {}
+  constructor(private http: HttpClient, private homeService: HomeService, private experienceService: ExperienceService) {}
 
   ngOnInit() {
     this.displayImages = this.homeService.displayImages
+    this.experiences = this.experienceService.experiences
 
     const container: string = '.cloud'
     let text = []

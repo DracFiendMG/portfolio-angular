@@ -1,24 +1,26 @@
 <div class="container my-5">
   <div class="row">
-    <div class="col">
-      <div class="row experience-card">
-        <div class="col-3">
-          <div class="date">{{ experience.startDate }} — {{ experience.endDate }}</div>
-        </div>
-        <div class="col">
-          <h3 class="title">
-            {{ experience.title }} · <span class="company">{{ experience.company }}</span>
-          </h3>
-          <p class="description">{{ experience.description }}</p>
-          <div class="tech-stack">
-            <span *ngFor="let tech of experience.techStack" class="tech-tag">{{ tech }}</span>
+    <div class="col experience-column">
+      <div *ngFor="let experience of experiences">
+        <div class="row experience-card">
+          <div class="col-3">
+            <div class="date">{{ experience.startDate }} — {{ experience.endDate }}</div>
+          </div>
+          <div class="col">
+            <h3 class="title">
+              {{ experience.title }} · <span class="company">{{ experience.company }}</span>
+            </h3>
+            <p class="description">{{ experience.description }}</p>
+            <div class="tech-stack">
+              <span *ngFor="let tech of experience.techStack" class="tech-tag">{{ tech }}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="row my-4 align-items-center">
-        <div class="container col-3 text-center">
+    <div class="col custom-col align-items-center ">
+      <div class="row my-4 skills-column">
+        <div class="container text-center">
           <div class="container cloud"></div>
         </div>
       </div>

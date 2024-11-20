@@ -23,6 +23,7 @@ export class HomeService {
             link: "mailto:sreeramrdy@gmail.com"
         }
     ]
+    
     summary = `I’m a <b class="keywords">Full Stack Developer</b> with over 1.5 years of experience at Wipro, 
                 specializing in <b class="keywords">Java</b>, <b class="keywords">Spring Boot</b>, <b class="keywords">MuleSoft</b> and <b class="keywords">Angular</b>. 
                 I have a strong background in <b class="keywords">REST API development</b>, messaging with <b class="keywords">RabbitMQ</b>, 
@@ -30,6 +31,8 @@ export class HomeService {
                 management with <b class="keywords">MySQL</b>, and <b class="keywords">PostgreSQL</b>, and have a solid understanding of 
                 <b class="keywords">AWS</b> cloud services. Recently, I earned an <b class="keywords">OCI Gen AI</b> certification, 
                 enhancing my skills in AI and machine learning.`
+    
+    
     displayImages: DisplayImage[] = 
     [
         {

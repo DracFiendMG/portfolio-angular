@@ -1,34 +1,52 @@
 
-ul.timeline-3 {
+/* ul.timeline-3 {
     list-style-type: none;
     position: relative;
-  }
-  ul.timeline-3:before {
-    content: " ";
-    background: #d4d9df;
-    display: inline-block;
-    position: absolute;
-    left: 29px;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
-  }
-  ul.timeline-3 > li {
-    margin: 20px 0;
-    padding-left: 20px;
-  }
-  ul.timeline-3 > li:before {
-    content: " ";
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid #22c0e8;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
-  }
+}
+ul.timeline-3:before {
+  content: " ";
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline-3 > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline-3 > li:before {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+} */
+
+.experience-column {
+  padding: 10px;
+}
+
+.skills-column {
+  position: fixed;
+}
+
+.custom-col {
+  /* align-items: center; */
+  justify-content: center;
+  display: flex;
+  /* position: fixed; */
+  /* z-index: 1000; */
+  top: 0; /* Sticks to the top of the viewport */
+  left: 0;
+}
 
 a {
   text-decoration: none;
@@ -37,36 +55,42 @@ a {
 }
 
 .experience-card {
-  background-color: #1a2a3a; /* Dark background color */
-  color: #d1e0f0; /* Light text color */
+  color: #e6e6e6;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   margin: auto;
+  margin-bottom: 10px;
+}
+
+.experience-card:hover {
+  background-color: #2a2e35;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  border-top: 1px solid rgb(121, 121, 121);
 }
 
 .date {
   font-size: 0.9em;
-  color: #8fa2b2;
+  color: #a3a3a3;
   margin: 5px 0;
 }
 
 .title {
   font-size: 1.3em;
-  color: #63f5cc; /* Light teal color for the title */
+  color: rgb(255, 86, 86);
   margin: 5px 0;
 }
 
 .company {
-  color: #8fa2b2; /* Slightly muted color for company name */
+  color: #e6e6e6;
 }
 
 .description {
   font-size: 1em;
   margin: 10px 0;
   line-height: 1.5;
-  color: #d1e0f0;
+  color: #dcdcdc;
 }
 
 .tech-stack {
@@ -77,9 +101,9 @@ a {
 }
 
 .tech-tag {
-  background-color: #20384d;
-  color: #63f5cc;
+  background-color: #3a3f47;
+  color: rgb(255, 86, 86);
   padding: 5px 10px;
-  border-radius: 8px;
+  border-radius: 15px;
   font-size: 0.85em;
 }

@@ -13,10 +13,11 @@ import { ProjectsService } from '../projects.service';
     styleUrl: './project-list.component.css',
     imports: [CommonModule, 
               ProjectItemComponent,
-              HttpClientModule]
+              HttpClientModule],
 })
 export class ProjectListComponent {
   projects!: Project[];
+  currentIndex: number = 0;
   // for getting data from json
   // url: string = './assets/projectData.json'
 
@@ -28,5 +29,17 @@ export class ProjectListComponent {
     //   this.projects = res
     // })
     this.projects = this.projectsService.projects
+  }
+
+  // Method to go to the next image
+  nextImage(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+    this.projectsService.updateCurrentIndex(this.currentIndex);
+  }
+
+  // Method to go to the previous image
+  previousImage(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
+    this.projectsService.updateCurrentIndex(this.currentIndex);
   }
 }
