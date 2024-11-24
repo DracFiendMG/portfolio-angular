@@ -25,10 +25,9 @@ export class ProjectListComponent {
               private projectsService: ProjectsService) {}
 
   ngOnInit() {
-    // this.http.get<Project[]>(this.url).subscribe(res => {
-    //   this.projects = res
-    // })
-    this.projects = this.projectsService.projects
+    this.projectsService.projects$.subscribe((data) => {
+      this.projects = data;
+    });
   }
 
   // Method to go to the next image

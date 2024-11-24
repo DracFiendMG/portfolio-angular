@@ -13,27 +13,39 @@ import { SkillsComponent } from "./skills/skills.component";
 import { ExperienceService } from './timeline/experience/experience.service';
 import { Subscription } from 'rxjs';
 import { Project } from './projects/project.model';
+import { trigger, style, animate, transition, state } from '@angular/animations';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    providers: [ProjectsService, HomeService, ExperienceService],
+    providers: [ProjectsService, HomeService, ExperienceService,],
     imports: [CommonModule,
-    RouterOutlet,
-    HeaderComponent,
-    ProjectsComponent,
-    TimelineComponent,
-    PagesComponent,
-    FooterComponent, 
-    HomeComponent, 
-    SkillsComponent]
+              RouterOutlet,
+              HeaderComponent,
+              ProjectsComponent,
+              TimelineComponent,
+              PagesComponent,
+              FooterComponent, 
+              HomeComponent, 
+              SkillsComponent],
+    animations: [
+      trigger('fadeAnimation', [
+        state(
+          '*',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ),
+        transition('* => *', [
+          style({ opacity: 0, transform: 'translateY(-10px)' }),
+          animate('600ms ease-in-out'),
+        ]),
+      ]),
+    ],
 })
 export class AppComponent {
   title = 'portfolio-angular';
   loadedTab = 'home'
-  currentImage: string = ''
   currentProject!: Project
 
   subscription: Subscription = new Subscription();
@@ -45,8 +57,10 @@ export class AppComponent {
   ngOnInit(): void {
     // Subscribe to the currentIndex observable
     this.subscription = this.projectService.currentIndex$.subscribe((index) => {
-      this.currentProject = this.projectService.projects[index]
-      this.currentImage = this.projectService.projects[index].imagePath;
+      this.projectService.projects$.subscribe((data) => {
+        // console.log('This is my current project: ', data[index])
+        this.currentProject = data[index];
+      })
     });
   }
 

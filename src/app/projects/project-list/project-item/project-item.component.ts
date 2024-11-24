@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './project-item.component.html',
-  styleUrl: './project-item.component.css'
+  styleUrl: './project-item.component.css',
 })
 export class ProjectItemComponent {
   @Input() project!: Project
@@ -24,9 +24,9 @@ export class ProjectItemComponent {
 
   ngOnInit(): void {
     // Subscribe to the currentIndex observable
-    this.subscription = this.projectService.currentIndex$.subscribe((index) => {
-      this.currentProject = this.projectService.projects[index]
-    });
+    // this.subscription = this.projectService.currentIndex$.subscribe((index) => {
+    //   this.currentProject = this.projectService.projects[index]
+    // });
   }
 
   ngOnDestroy(): void {

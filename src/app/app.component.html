@@ -1,5 +1,12 @@
-<div [ngClass]="{'content': loadedTab === 'projects'}" [ngStyle]="{ 'background-image': loadedTab === 'projects' ? 'url(' + currentImage + ')' : '' }">
+<div [ngClass]="{'content': loadedTab === 'projects'}" [ngStyle]="{ 'background-image': loadedTab === 'projects' ? 'url(' + currentProject.imagePath + ')' : '' }">
     <app-header [ngClass]="{'navbar-transparent': loadedTab === 'projects'}" (tabSelected)="onNavigate($event)"></app-header>
+
+    <div class="item" *ngIf="loadedTab === 'projects'">
+        <div>
+            <p class="title" [@fadeAnimation]="currentProject.name">{{ currentProject.name }}</p>
+            <p>{{ currentProject.description }}</p>
+        </div>
+    </div>
 
     <div class="body-con">
         <app-home *ngIf="loadedTab === 'home'"></app-home>
