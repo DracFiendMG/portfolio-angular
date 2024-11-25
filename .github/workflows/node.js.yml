@@ -30,4 +30,12 @@ jobs:
     - run: npm ci
     # - run: npm install -g @angular/cli
     # - run: ng build --output-path docs --base-href "https://github.com/DracFiendMG/portfolio-angular/"
-    - run: npm run build
+    - name: Build application
+      env:
+        MONGO_USERNAME: ${{ secrets.MONGO_USERNAME }}
+        MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+        MONGO_CLUSTER: ${{ secrets.MONGO_CLUSTER }}
+        MONGO_DB: ${{ secrets.MONGO_DB }}
+      run: |
+        echo "Building application..."
+        npm run build
