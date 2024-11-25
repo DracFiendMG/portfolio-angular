@@ -6,20 +6,6 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
-/* body {
-	margin: 0;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #000;
-	cursor: none;
-}
-body h1 {
-	color: #fff;
-	font-family: "Protest Riot", sans-serif;
-	font-size: 60px;
-} */
 .cursor {
 	position: fixed;
 	width: 45%;
