@@ -39,12 +39,3 @@ jobs:
       run: |
         echo "Building application..."
         npm run build
-    - name: Deploy application
-      env:
-        MONGO_USERNAME: ${{ secrets.MONGO_USERNAME }}
-        MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
-        MONGO_CLUSTER: ${{ secrets.MONGO_CLUSTER }}
-        MONGO_DB: ${{ secrets.MONGO_DB }}
-      run: |
-        echo "Deploying application..."
-        npm start
