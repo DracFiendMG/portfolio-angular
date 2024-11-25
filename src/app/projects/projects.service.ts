@@ -2,6 +2,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 import { Project } from "./project.model";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { environment } from "../environments/prod/environment.prod";
 
 @Injectable({
     providedIn: 'root',
@@ -13,7 +14,7 @@ export class ProjectsService {
     currentIndex$ = this.currentIndexSubject.asObservable()
     projects$ = this.projectsSubject.asObservable()
 
-    private apiUrl = 'http://localhost:3000/api/projects';
+    private apiUrl = environment.apiUrl;
 
     constructor(private http: HttpClient) {
         this.fetchProjects()
@@ -55,7 +56,7 @@ export class ProjectsService {
     }
 
     private fetchProjects(): void {
-        this.http.get<Project[]>(this.apiUrl).subscribe(
+        this.http.get<Project[]>(`${this.apiUrl}/projects`).subscribe(
             (data) => {
                 this.projectsSubject.next(data)
             },
