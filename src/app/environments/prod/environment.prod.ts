@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://portfolio-server-9p51.onrender.com/api'
-  };
+    apiUrl: 'https://portfolio-server-tau-ten.vercel.app/api'
+};
   

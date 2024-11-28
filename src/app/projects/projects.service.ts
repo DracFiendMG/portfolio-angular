@@ -56,6 +56,7 @@ export class ProjectsService {
     }
 
     private fetchProjects(): void {
+        console.log("This is my URL: ", this.apiUrl);
         this.http.get<Project[]>(`${this.apiUrl}/projects`).subscribe(
             (data) => {
                 this.projectsSubject.next(data)
