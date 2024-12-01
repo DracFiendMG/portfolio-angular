@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import TagCloud from 'TagCloud';
-import { DisplayImage } from '../home/display-image.model';
-import { HomeService } from '../home/home.service';
+import { DisplayImage } from '../about/model/display-image.model';
+import { AboutService } from '../about/about.service';
 import { Experience } from './experience/experience.interface';
 import { ExperienceService } from './experience/experience.service';
 
@@ -20,10 +20,12 @@ export class TimelineComponent {
 
   experiences: Experience[] = [];
   
-  constructor(private http: HttpClient, private homeService: HomeService, private experienceService: ExperienceService) {}
+  constructor(private http: HttpClient, private aboutService: AboutService, private experienceService: ExperienceService) {}
 
   ngOnInit() {
-    this.displayImages = this.homeService.displayImages
+    this.aboutService.skills$.subscribe((data) => {
+      this.displayImages = data
+    })
     this.experiences = this.experienceService.experiences
 
     const container: string = '.cloud'

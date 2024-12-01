@@ -7,8 +7,8 @@ import { TimelineComponent } from "./timeline/timeline.component";
 import { PagesComponent } from "./pages/pages.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ProjectsService } from './projects/projects.service';
-import { HomeComponent } from "./home/home.component";
-import { HomeService } from './home/home.service';
+import { AboutComponent } from "./about/about.component";
+import { AboutService } from './about/about.service';
 import { SkillsComponent } from "./skills/skills.component";
 import { ExperienceService } from './timeline/experience/experience.service';
 import { Subscription } from 'rxjs';
@@ -20,7 +20,7 @@ import { trigger, style, animate, transition, state } from '@angular/animations'
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    providers: [ProjectsService, HomeService, ExperienceService,],
+    providers: [ProjectsService, AboutService, ExperienceService,],
     imports: [CommonModule,
               RouterOutlet,
               HeaderComponent,
@@ -28,7 +28,7 @@ import { trigger, style, animate, transition, state } from '@angular/animations'
               TimelineComponent,
               PagesComponent,
               FooterComponent, 
-              HomeComponent, 
+              AboutComponent, 
               SkillsComponent],
     animations: [
       trigger('fadeAnimation', [

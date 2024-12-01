@@ -1,6 +1,6 @@
-export class Links {
-    public name: String
-    public link: String
+export class Contact {
+    name: String
+    link: String
 
     constructor(name: String, link: String) {
         this.name = name
