@@ -5,17 +5,17 @@
                                                   'navbar-transparent': activeTab === 'projects'}">
     <div class="container-fluid">
       
-      <a class="navbar-brand fw-bolder" href="#"><h1>$</h1></a>
+      <a class="navbar-brand fw-bolder" href="#"><h1></h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 my-lg-0 fs-5">
           <li class="nav-item mx-5">
-            <a href="#" class="nav-link" (click)="onSelect('home')">
+            <a href="#home" class="nav-link" (click)="onSelect('home')">
               <span [ngClass]="{ 'active': activeTab === 'home',
                                   'link': activeTab !== 'home',
-                                  'link-dark': activeTab === 'pages' }"> Home </span>
+                                  'link-dark': activeTab === 'projects' }"> Home </span>
             </a>
           </li>
           <!-- <li class="nav-item mx-5">
@@ -33,17 +33,17 @@
             </a>
           </li> -->
           <li class="nav-item mx-5">
-            <a class="nav-link" href="#" (click)="onSelect('projects')" >
-              <span [ngClass]="{ 'active': activeTab === 'projects',
+            <a class="nav-link" href="#projects" (click)="onSelect('projects')" >
+              <span [ngClass]="{ 'active-dark': activeTab === 'projects',
                                   'link': activeTab !== 'projects',
-                                  'link-dark': activeTab === 'pages' }"> Projects </span>
+                                  'link-dark': activeTab === 'projects', }"> Projects </span>
             </a>
           </li>
           <li class="nav-item ms-5">
-            <a href="#" class="nav-link" (click)="onSelect('experience')">
+            <a href="#experience" class="nav-link" (click)="onSelect('experience')">
               <span [ngClass]="{ 'active': activeTab === 'experience',
                                   'link': activeTab !== 'experience',
-                                  'link-dark': activeTab === 'pages' }"> Experience </span>
+                                  'link-dark': activeTab === 'projects' }"> Experience </span>
             </a>
           </li>
           <!-- <li class="nav-item dropdown ms-5">

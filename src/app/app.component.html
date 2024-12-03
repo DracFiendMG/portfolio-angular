@@ -1,5 +1,15 @@
-<div [ngClass]="{'content': loadedTab === 'projects'}" [ngStyle]="{ 'background-image': loadedTab === 'projects' ? 'url(' + currentProject.imagePath + ')' : '' }">
-    <app-header [ngClass]="{'navbar-transparent': loadedTab === 'projects'}" (tabSelected)="onNavigate($event)"></app-header>
+<div 
+    [ngClass]="{'content': loadedTab === 'projects'}" 
+>
+    <div
+        *ngIf="loadedTab === 'projects'"
+        class="background-overlay"
+        [ngStyle]="{ 'background-image': loadedTab === 'projects' ? 'url(' + currentProject.imagePath + ')' : '' }"
+    ></div>
+    <app-header 
+        [ngClass]="{'navbar-transparent': loadedTab === 'projects'}" 
+        (tabSelected)="onNavigate($event)"
+    ></app-header>
 
     <div class="item" *ngIf="loadedTab === 'projects'">
         <div>
@@ -15,6 +25,5 @@
         <app-pages *ngIf="loadedTab === 'pages'"></app-pages>
         <app-timeline *ngIf="loadedTab === 'experience'"></app-timeline>
     </div>
-    <!-- <app-footer *ngIf="loadedTab !== 'projects'"></app-footer> -->
     <a *ngIf="loadedTab === 'projects'" [href]="currentProject.projectLink" target="_blank" class="stretched-link"></a>
 </div>

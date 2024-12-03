@@ -26,7 +26,10 @@ export class TimelineComponent {
     this.aboutService.skills$.subscribe((data) => {
       this.displayImages = data
     })
-    this.experiences = this.experienceService.experiences
+    
+    this.experienceService.experience$.subscribe((data) => {
+      this.experiences = data
+    })
 
     const container: string = '.cloud'
     let text = []

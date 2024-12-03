@@ -65,7 +65,6 @@ export class AppComponent {
   }
 
   ngOnDestroy(): void {
-    // Unsubscribe to avoid memory leaks
     this.subscription.unsubscribe();
   }
 
