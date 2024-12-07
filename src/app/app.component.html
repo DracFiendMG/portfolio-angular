@@ -10,6 +10,7 @@
         [ngClass]="{'navbar-transparent': loadedTab === 'projects'}" 
         (tabSelected)="onNavigate($event)"
     ></app-header>
+    <!-- <router-outlet></router-outlet> -->
 
     <div class="item" *ngIf="loadedTab === 'projects'">
         <div>
@@ -19,7 +20,7 @@
     </div>
 
     <div class="body-con">
-        <app-about *ngIf="loadedTab === 'home'"></app-about>
+        <app-about *ngIf="loadedTab === 'about'"></app-about>
         <app-skills *ngIf="loadedTab === 'skills'"></app-skills>
         <app-projects *ngIf="loadedTab === 'projects'"></app-projects>
         <app-pages *ngIf="loadedTab === 'pages'"></app-pages>

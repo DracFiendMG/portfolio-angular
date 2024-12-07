@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   @Output() tabSelected = new EventEmitter<string>()
-  activeTab = 'home'
+  activeTab = 'about'
 
   onSelect(tab: string) {
     this.activeTab = tab

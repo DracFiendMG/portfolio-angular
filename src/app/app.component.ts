@@ -45,7 +45,7 @@ import { trigger, style, animate, transition, state } from '@angular/animations'
 })
 export class AppComponent {
   title = 'portfolio-angular';
-  loadedTab = 'home'
+  loadedTab = 'about'
   currentProject!: Project
 
   subscription: Subscription = new Subscription();

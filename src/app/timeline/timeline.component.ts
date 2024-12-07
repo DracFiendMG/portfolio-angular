@@ -15,7 +15,7 @@ import { ExperienceService } from './experience/experience.service';
   styleUrl: './timeline.component.css'
 })
 export class TimelineComponent {
-  radius = 200
+  radius = 250
   displayImages: DisplayImage[] = []
 
   experiences: Experience[] = [];
@@ -31,12 +31,13 @@ export class TimelineComponent {
       this.experiences = data
     })
 
+    const skill = {"description":"bitbucket image","imagePath":"./assets/bitbucket-icon.png","name":"bitbucket-icon"}
+
     const container: string = '.cloud'
     let text = []
     let image = ''
     for (let i = 1; i < this.displayImages.length; i++) {
       image = `<img class="icon" src=${this.displayImages[i].imagePath} alt=${this.displayImages[i].description} width="15%">`
-      // image = `<app-pages></app-pages>`
       text.push(image)
     }
 
