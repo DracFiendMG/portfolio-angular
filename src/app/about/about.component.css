@@ -14,13 +14,16 @@
 
 .container {
     /* position: relative; */
-    width: 500px; /* Adjust based on your image size */
-    margin: auto;
+    /* width: 500px; */
+    overflow: hidden; /* Prevents content from spilling outside */
+    max-width: 100%;
 }
 
 .base-image {
-    width: 130%;
-    /* height: auto; */
+    /* width: 130%; */
+    max-width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any inline gaps */
 }
 
 .bi {
@@ -50,4 +53,22 @@
 .contact-links a {
     text-decoration: none;
     color: white;
+}
+
+.about-column {
+    /* flex: 1 0 0%; */
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .base-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-column {
+        width: 100%;
+    }
 }
