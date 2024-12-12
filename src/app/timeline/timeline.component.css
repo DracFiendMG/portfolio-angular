@@ -3,6 +3,7 @@
 }
 
 .experience-column {
+  order: 2;
   padding: 10px;
 }
 
@@ -11,6 +12,7 @@
 }
 
 .skill-col {
+  order: 1;
   justify-content: center;
   display: flex;
   top: 0;
