@@ -18,6 +18,7 @@ import { ProjectsService } from '../projects.service';
 export class ProjectListComponent {
   projects!: Project[];
   currentIndex: number = 0;
+  slideInterval: any
   // for getting data from json
   // url: string = './assets/projectData.json'
 
@@ -28,6 +29,11 @@ export class ProjectListComponent {
     this.projectsService.projects$.subscribe((data) => {
       this.projects = data;
     });
+    this.startAutoSlide()
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoSlide();
   }
 
   // Method to go to the next image
@@ -40,5 +46,17 @@ export class ProjectListComponent {
   previousImage(): void {
     this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
     this.projectsService.updateCurrentIndex(this.currentIndex);
+  }
+
+  startAutoSlide(): void {
+    this.slideInterval = setInterval(() => {
+      this.nextImage();
+    }, 5000); // Change slide every 5 seconds
+  }
+
+  stopAutoSlide(): void {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
   }
 }

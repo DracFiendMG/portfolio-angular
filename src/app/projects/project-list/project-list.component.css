@@ -5,18 +5,9 @@
   display: flex;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
 .arrow-button {
-  width: 30px; /* Adjust overall size */
-  height: 30px;
+  width: 60px; /* Adjust overall size */
+  height: 60px;
   cursor: pointer; /* Pointer cursor for interactivity */
   z-index: 100;
 }
@@ -60,4 +51,13 @@ button {
 .arrow-button:hover::before,
 .arrow-button:hover::after {
   background-color: white; /* Change line color on hover */
+}
+
+@media (max-width: 1000px) {
+  .less-than::before {
+    left: 90%;
+  }
+  .less-than::after {
+    left: 90%;
+  }
 }
